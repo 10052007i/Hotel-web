@@ -1,0 +1,27 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/sections/Header.astro';
+import Solucion from '@/components/sections/Solucion.astro';
+import Footer from '@/components/sections/Footer.astro';
+import WhatsAppFijo from '@/components/ui/WhatsAppFijo.astro';
+---
+
+<BaseLayout 
+  title="Bloqueo de Reasignación | Cuadrape Web"
+  description="Cuadrape impide re-alquilar habitaciones que fueron liberadas antes de tiempo sin registrar el motivo exacto."
+>
+  <Header currentPath="/solucion" />
+  <main class="flex-grow">
+    <div class="bg-brand-blue text-white py-10 px-4 text-center">
+      <div class="max-w-4xl mx-auto space-y-2">
+        <h1 class="text-3xl sm:text-4xl font-black">Bloqueo de Reasignación Automático</h1>
+        <p class="text-sm sm:text-base text-sky-100 max-w-2xl mx-auto">
+          El diferencial único que protege los ingresos de tu hospedaje.
+        </p>
+      </div>
+    </div>
+    <Solucion />
+  </main>
+  <Footer />
+  <WhatsAppFijo idTriggerPortada="hero-whatsapp-btn" />
+</BaseLayout>

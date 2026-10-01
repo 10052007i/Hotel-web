@@ -1,0 +1,27 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/sections/Header.astro';
+import ResultadosPiloto from '@/components/sections/ResultadosPiloto.astro';
+import Footer from '@/components/sections/Footer.astro';
+import WhatsAppFijo from '@/components/ui/WhatsAppFijo.astro';
+---
+
+<BaseLayout 
+  title="Resultados del Piloto en Pucallpa | Cuadrape Web"
+  description="Resultados reales medidos en hospedaje de 24 habitaciones en Pucallpa: 42 salidas auditadas y 98% cuadres exactos."
+>
+  <Header currentPath="/piloto" />
+  <main class="flex-grow">
+    <div class="bg-brand-blue text-white py-10 px-4 text-center">
+      <div class="max-w-4xl mx-auto space-y-2">
+        <h1 class="text-3xl sm:text-4xl font-black">Resultados Medidos en Piloto Real</h1>
+        <p class="text-sm sm:text-base text-sky-100 max-w-2xl mx-auto">
+          Prueba documentada en hospedaje de 24 habitaciones y 3 recepcionistas en Pucallpa.
+        </p>
+      </div>
+    </div>
+    <ResultadosPiloto />
+  </main>
+  <Footer />
+  <WhatsAppFijo idTriggerPortada="hero-whatsapp-btn" />
+</BaseLayout>

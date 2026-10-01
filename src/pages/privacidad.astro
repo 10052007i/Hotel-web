@@ -1,0 +1,33 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/sections/Header.astro';
+import Footer from '@/components/sections/Footer.astro';
+import { SITE_CONFIG } from '@/config/site';
+---
+
+<BaseLayout title={`Política de Privacidad | ${SITE_CONFIG.nombreEmpresa}`} description="Política de privacidad y protección de datos personales.">
+  <Header />
+  <main class="max-w-4xl mx-auto px-4 py-12 sm:py-16 space-y-6">
+    <h1 class="text-3xl sm:text-4xl font-black text-brand-blue">Política de Privacidad</h1>
+    <p class="text-sm text-slate-500 font-numeric">Última actualización: Septiembre 2026</p>
+    
+    <div class="prose prose-slate max-w-none text-sm sm:text-base leading-relaxed space-y-4">
+      <p>
+        En <strong>{SITE_CONFIG.nombreEmpresa}</strong> ({SITE_CONFIG.titularLegal}, RUC {SITE_CONFIG.ruc}), nos comprometemos a proteger la privacidad de nuestros usuarios y clientes.
+      </p>
+      <h2 class="text-lg font-bold text-slate-900 pt-4">1. Recopilación de Información</h2>
+      <p>
+        Esta página web no utiliza cookies de rastreo ni recopila datos personales sin tu consentimiento. Las solicitudes de demostración se gestionan directamente a través de WhatsApp.
+      </p>
+      <h2 class="text-lg font-bold text-slate-900 pt-4">2. Tratamiento de Datos del Servicio</h2>
+      <p>
+        Los datos ingresados por nuestros clientes en la plataforma de gestión pertenecen exclusivamente al hospedaje cliente. Cuadrape actúa como encargado del tratamiento bajo estrictas cláusulas de confidencialidad y seguridad.
+      </p>
+      <h2 class="text-lg font-bold text-slate-900 pt-4">3. Contacto</h2>
+      <p>
+        Para ejercer tus derechos sobre tus datos personales, puedes escribirnos a <a href={`mailto:${SITE_CONFIG.soporteEmail}`} class="text-brand-blue underline">{SITE_CONFIG.soporteEmail}</a>.
+      </p>
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>

@@ -1,0 +1,39 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/sections/Header.astro';
+import Portada from '@/components/sections/Portada.astro';
+import Problema from '@/components/sections/Problema.astro';
+import Solucion from '@/components/sections/Solucion.astro';
+import PanelDueno from '@/components/sections/PanelDueno.astro';
+import ResultadosPiloto from '@/components/sections/ResultadosPiloto.astro';
+import ComoTrabajas from '@/components/sections/ComoTrabajas.astro';
+import RegistroHuespedes from '@/components/sections/RegistroHuespedes.astro';
+import Precios from '@/components/sections/Precios.astro';
+import ComoEmpezamos from '@/components/sections/ComoEmpezamos.astro';
+import Soporte from '@/components/sections/Soporte.astro';
+import PreguntasFrecuentes from '@/components/sections/PreguntasFrecuentes.astro';
+import Footer from '@/components/sections/Footer.astro';
+import WhatsAppFijo from '@/components/ui/WhatsAppFijo.astro';
+---
+
+<BaseLayout 
+  title="Cuadrape para Hospedajes | Sistema de Control y Arqueo de Caja"
+  description="Sistema de control para hospedajes que alquilan por horas. Cada ingreso, cobro y salida queda registrado a nombre de quien lo hizo desde tu celular."
+>
+  <Header />
+  <main class="flex-grow">
+    <Portada />
+    <Problema />
+    <Solucion />
+    <PanelDueno />
+    <ResultadosPiloto />
+    <ComoTrabajas />
+    <RegistroHuespedes />
+    <Precios />
+    <ComoEmpezamos />
+    <Soporte />
+    <PreguntasFrecuentes />
+  </main>
+  <Footer />
+  <WhatsAppFijo idTriggerPortada="hero-whatsapp-btn" />
+</BaseLayout>

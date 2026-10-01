@@ -1,0 +1,57 @@
+---
+const PASOS = [
+  {
+    numero: "01",
+    titulo: "Te mostramos el sistema",
+    descripcion: "En una sesión presencial en tu hospedaje en Pucallpa o por videollamada si prefieres."
+  },
+  {
+    numero: "02",
+    titulo: "Lo dejamos totalmente listo",
+    descripcion: "Cargamos tus habitaciones, tus tarifas (horas/noches), tus métodos de pago y los usuarios de tu equipo."
+  },
+  {
+    numero: "03",
+    titulo: "Capacitamos a tu equipo",
+    descripcion: "Una sesión presencial rápida adaptada a cada recepcionista, más videos breves de respaldo."
+  },
+  {
+    numero: "04",
+    titulo: "Revisamos tu primer reporte",
+    descripcion: "Nos reunimos contigo al cerrar tu primer mes para revisar tus cierres de caja y asegurar el control exacto de tus turnos."
+  }
+];
+---
+
+<section class="py-12 md:py-20 bg-brand-bg border-b border-slate-200">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6">
+    
+    <div class="text-center max-w-3xl mx-auto space-y-4">
+      <span class="text-xs font-black uppercase tracking-widest text-brand-blue bg-blue-50 px-3 py-1 rounded-full border border-blue-100">
+        Paso a Paso
+      </span>
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-brand-blue tracking-tight">
+        Cómo empezamos a trabajar juntos
+      </h2>
+      <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+        Sin fricción ni pérdidas de tiempo. Nos encargamos de dejar todo configurado.
+      </p>
+    </div>
+
+    <!-- 4 Steps Grid -->
+    <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {PASOS.map((paso) => (
+        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm relative flex flex-col justify-between hover:border-brand-gold transition">
+          <div class="space-y-3">
+            <span class="text-3xl font-black text-brand-gold font-numeric">{paso.numero}</span>
+            <h3 class="font-bold text-base text-slate-900">{paso.titulo}</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              {paso.descripcion}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

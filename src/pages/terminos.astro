@@ -1,0 +1,30 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/sections/Header.astro';
+import Footer from '@/components/sections/Footer.astro';
+import { SITE_CONFIG } from '@/config/site';
+---
+
+<BaseLayout title={`Términos del Servicio | ${SITE_CONFIG.nombreEmpresa}`} description="Términos y condiciones del servicio comercial de Cuadrape Web.">
+  <Header />
+  <main class="max-w-4xl mx-auto px-4 py-12 sm:py-16 space-y-6">
+    <h1 class="text-3xl sm:text-4xl font-black text-brand-blue">Términos del Servicio</h1>
+    <p class="text-sm text-slate-500 font-numeric">Última actualización: Septiembre 2026</p>
+
+    <div class="prose prose-slate max-w-none text-sm sm:text-base leading-relaxed space-y-4">
+      <h2 class="text-lg font-bold text-slate-900">1. Servicio y Plan Único</h2>
+      <p>
+        Cuadrape Web ofrece una suscripción mensual de S/ 119 (IGV incluido) sin permanencia forzosa. El usuario puede cancelar la suscripción en cualquier momento.
+      </p>
+      <h2 class="text-lg font-bold text-slate-900 pt-4">2. Implementación</h2>
+      <p>
+        La implementación presencial en Pucallpa se realiza por un pago único de S/ 300 (IGV incluido), que comprende la carga inicial de datos y la capacitación del personal.
+      </p>
+      <h2 class="text-lg font-bold text-slate-900 pt-4">3. Cancelación y Exportación de Datos</h2>
+      <p>
+        En caso de cancelación del servicio, se entregará al cliente un archivo con la exportación de sus datos operativos y se procederá a la eliminación segura de sus registros en nuestros sistemas.
+      </p>
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>

@@ -1,0 +1,29 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/sections/Header.astro';
+import PreguntasFrecuentes from '@/components/sections/PreguntasFrecuentes.astro';
+import Soporte from '@/components/sections/Soporte.astro';
+import Footer from '@/components/sections/Footer.astro';
+import WhatsAppFijo from '@/components/ui/WhatsAppFijo.astro';
+---
+
+<BaseLayout 
+  title="Preguntas Frecuentes y Soporte | Cuadrape Web"
+  description="Respuestas claras a objeciones comunes sobre boleta SUNAT, cortes de internet, cancelación y soporte local."
+>
+  <Header currentPath="/faq" />
+  <main class="flex-grow">
+    <div class="bg-brand-blue text-white py-10 px-4 text-center">
+      <div class="max-w-4xl mx-auto space-y-2">
+        <h1 class="text-3xl sm:text-4xl font-black">Preguntas Frecuentes y Soporte</h1>
+        <p class="text-sm sm:text-base text-sky-100 max-w-2xl mx-auto">
+          Resuelve todas tus inquietudes sobre el funcionamiento de Cuadrape.
+        </p>
+      </div>
+    </div>
+    <PreguntasFrecuentes />
+    <Soporte />
+  </main>
+  <Footer />
+  <WhatsAppFijo idTriggerPortada="hero-whatsapp-btn" />
+</BaseLayout>

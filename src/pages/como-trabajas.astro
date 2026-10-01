@@ -1,0 +1,29 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/sections/Header.astro';
+import ComoTrabajas from '@/components/sections/ComoTrabajas.astro';
+import RegistroHuespedes from '@/components/sections/RegistroHuespedes.astro';
+import Footer from '@/components/sections/Footer.astro';
+import WhatsAppFijo from '@/components/ui/WhatsAppFijo.astro';
+---
+
+<BaseLayout 
+  title="Adaptado a tu Operación | Cuadrape Web"
+  description="Tarifas por horas/noches, conciliación de Yape/Efectivo/POS y control de inventario de friobar."
+>
+  <Header currentPath="/como-trabajas" />
+  <main class="flex-grow">
+    <div class="bg-brand-blue text-white py-10 px-4 text-center">
+      <div class="max-w-4xl mx-auto space-y-2">
+        <h1 class="text-3xl sm:text-4xl font-black">Hecho para Cómo Trabajas Tú y Tu Equipo</h1>
+        <p class="text-sm sm:text-base text-sky-100 max-w-2xl mx-auto">
+          Tarifas, métodos de pago, friobar y registro de ocupantes adaptados a la realidad de tu hospedaje.
+        </p>
+      </div>
+    </div>
+    <ComoTrabajas />
+    <RegistroHuespedes />
+  </main>
+  <Footer />
+  <WhatsAppFijo idTriggerPortada="hero-whatsapp-btn" />
+</BaseLayout>

@@ -1,0 +1,64 @@
+---
+import { DATOS_PILOTO } from '@/data/hospedajes/testimonios';
+---
+
+<section id="piloto" class="py-12 md:py-20 bg-brand-bg border-b border-slate-200">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6">
+    
+    <div class="text-center max-w-3xl mx-auto space-y-4">
+      <span class="text-xs font-black uppercase tracking-widest text-emerald-800 bg-emerald-100 px-3 py-1 rounded-full">
+        Prueba Real en Piloto
+      </span>
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-brand-blue tracking-tight">
+        Resultados medidos en hospedaje de Pucallpa
+      </h2>
+      <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+        Caso real: {DATOS_PILOTO.habitaciones} habitaciones, {DATOS_PILOTO.recepcionistas} recepcionistas. Antes llevaban la gestión en {DATOS_PILOTO.metodoAnterior.toLowerCase()}.
+      </p>
+    </div>
+
+    <!-- 3 Metrics cards -->
+    <div class="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+      
+      <!-- Metric 1 -->
+      <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-2">
+        <div class="text-3xl sm:text-4xl font-black text-brand-blue font-numeric">{DATOS_PILOTO.salidasAntesDeTiempoRegistradas}</div>
+        <p class="text-xs sm:text-sm font-bold text-slate-800">Salidas antes de tiempo auditadas</p>
+        <p class="text-[11px] text-slate-500">En el primer mes de uso. Todas registradas con motivo antes de re-alquilar.</p>
+      </div>
+
+      <!-- Metric 2 -->
+      <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-2">
+        <div class="text-3xl sm:text-4xl font-black text-emerald-600 font-numeric">{DATOS_PILOTO.cuadresExactosPorcentaje}%</div>
+        <p class="text-xs sm:text-sm font-bold text-slate-800">Cuadres de caja exactos</p>
+        <p class="text-[11px] text-slate-500">Sin diferencias no justificadas al cierre de cada turno de recepción.</p>
+      </div>
+
+      <!-- Metric 3 -->
+      <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-2">
+        <div class="text-3xl sm:text-4xl font-black text-brand-gold font-numeric">0</div>
+        <p class="text-xs sm:text-sm font-bold text-slate-800">Fugas de dinero no explicadas</p>
+        <p class="text-[11px] text-slate-500">Transparencia total para el dueño y tranquilidad para el personal.</p>
+      </div>
+
+    </div>
+
+    <!-- Real Quote -->
+    <div class="mt-10 bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-md relative overflow-hidden">
+      <div class="absolute top-0 right-0 w-2 h-full bg-brand-gold"></div>
+      <div class="space-y-4">
+        <svg class="w-8 h-8 text-brand-gold/60" fill="currentColor" viewBox="0 0 32 32">
+          <path d="M10 8c-3.3 0-6 2.7-6 6v10h10V14H6c0-2.2 1.8-4 4-4V8zm18 0c-3.3 0-6 2.7-6 6v10h10V14h-8c0-2.2 1.8-4 4-4V8z"/>
+        </svg>
+        <p class="text-sm sm:text-base text-slate-800 italic font-medium leading-relaxed">
+          "{DATOS_PILOTO.citaDueno}"
+        </p>
+        <div class="text-xs font-bold text-slate-600 pt-2 border-t border-slate-100 flex items-center justify-between">
+          <span>Dueño de Hospedaje en Pucallpa</span>
+          <span class="text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded font-semibold">Verificado en Piloto</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

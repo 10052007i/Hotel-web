@@ -1,0 +1,110 @@
+---
+// CuadernoVSVisual.astro - Comparativo visual con fondo de código de desarrollo web 85% visible
+---
+<div class="w-full max-w-5xl mx-auto my-8">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+
+    <!-- LADO IZQUIERDO: EL CUADERNO (LA FUGAS Y AMBIGÜEDAD) -->
+    <div class="bg-amber-50/95 border-2 border-amber-300 rounded-2xl p-6 shadow-sm flex flex-col justify-between relative overflow-hidden font-mono text-xs">
+      <div class="absolute -right-12 -top-12 w-32 h-32 bg-amber-200/40 rounded-full blur-2xl pointer-events-none"></div>
+      
+      <div>
+        <!-- Badges -->
+        <div class="flex items-center justify-between border-b border-amber-300/60 pb-3 mb-4">
+          <div class="flex items-center gap-2 text-amber-900 font-sans font-bold text-sm">
+            <svg class="w-5 h-5 text-amber-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+            </svg>
+            <span>El Cuaderno Tradicional</span>
+          </div>
+          <span class="bg-amber-200/80 text-amber-900 px-2.5 py-0.5 rounded-full text-[11px] font-sans font-bold">Fugas sin Rastro</span>
+        </div>
+
+        <!-- Simulated notebook sheet -->
+        <div class="bg-amber-100/70 p-4 rounded-xl border border-amber-300/60 space-y-3 font-mono text-slate-800 leading-tight">
+          <div class="text-[11px] text-amber-900/80 border-b border-amber-300/40 pb-1 font-bold">
+            Hoja de Registro • Turno Tarde (14:00 - 22:00)
+          </div>
+
+          <div class="space-y-2 text-[11px]">
+            <div class="flex justify-between items-center text-slate-700">
+              <span>14:00 p.m. - Hab 5 (4 Horas)</span>
+              <span class="font-bold">S/ 40.00 (Anotado)</span>
+            </div>
+            <div class="text-rose-700 text-[10px] italic pl-2 border-l-2 border-rose-400">
+              15:00 p.m. -> Pareja sale temprano. El cuaderno sigue marcando salida a las 18:00 p.m.
+            </div>
+            <div class="bg-rose-100/90 p-2 rounded text-rose-900 border border-rose-300/70 text-[10px] space-y-1">
+              <div class="font-bold flex items-center gap-1">
+                <span>15:30 p.m. -> Llega nuevo cliente a la Hab 5</span>
+              </div>
+              <p class="text-rose-800">Paga S/ 40.00 en efectivo. <strong>En el cuaderno NO se anota</strong> porque para el papel la Hab 5 ya estaba "pagada hasta las 18:00".</p>
+            </div>
+            <div class="flex justify-between items-center text-slate-500 line-through">
+              <span>18:00 p.m. - Limpieza hab 5</span>
+              <span>S/ 0.00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-4 pt-3 border-t border-amber-300/80 text-amber-900/90 font-sans text-xs flex items-center justify-between font-semibold">
+        <span>Resultado al cerrar el turno:</span>
+        <span class="text-rose-700 font-bold font-numeric">S/ 40.00 sin ingresar a caja</span>
+      </div>
+    </div>
+
+    <!-- LADO DERECHO: CUADRAPE CON FONDO REAL DE PROGRAMACIÓN (85% VISIBILIDAD NÍTIDA) -->
+    <div class="bg-slate-950 text-white border-2 border-brand-blue rounded-2xl p-6 shadow-2xl flex flex-col justify-between relative overflow-hidden font-sans">
+      
+      <!-- Real Web Dev Source Code Wallpaper Background (85% Opacity) -->
+      <div class="absolute inset-0 bg-[url('/images/bg-dev-screen.jpg')] bg-cover bg-center opacity-85 pointer-events-none"></div>
+      <div class="absolute inset-0 bg-gradient-to-br from-brand-blue/80 via-slate-950/75 to-brand-blue/80 pointer-events-none"></div>
+
+      <div class="relative z-10">
+        <!-- Badges -->
+        <div class="flex items-center justify-between border-b border-sky-600/80 pb-3 mb-4">
+          <div class="flex items-center gap-2 text-white font-bold text-sm">
+            <svg class="w-5 h-5 text-brand-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span>Con Cuadrape Web</span>
+          </div>
+          <span class="bg-brand-gold text-brand-dark px-2.5 py-0.5 rounded-full text-[11px] font-bold">Bloqueo de Reasignación</span>
+        </div>
+
+        <!-- Simulated system panel -->
+        <div class="bg-slate-950/90 p-4 rounded-xl border border-sky-700 space-y-3 text-xs backdrop-blur-sm shadow-xl">
+          <div class="text-[11px] text-sky-300 font-bold border-b border-slate-800 pb-1 flex justify-between">
+            <span>Tablero Digital en Celular o PC</span>
+            <span class="text-emerald-400 font-numeric">S/ 80.00 Total Hab 5</span>
+          </div>
+
+          <div class="space-y-2 text-[11px]">
+            <div class="flex justify-between items-center text-slate-200">
+              <span>14:00 - Hab 5 (Alquiler 4h)</span>
+              <span class="font-bold text-emerald-400 font-numeric">S/ 40.00 Ingresado</span>
+            </div>
+            <div class="bg-amber-950/85 p-2 rounded text-amber-200 border border-amber-800/80 text-[10px]">
+              <div class="font-bold">15:00 - Salida Anticipada Auditada</div>
+              <p class="text-amber-300/90 mt-0.5">El recepcionista registra la liberación. El dueño recibe notificación inmediata con el motivo exacto.</p>
+            </div>
+            <div class="bg-emerald-950/85 p-2 rounded text-emerald-200 border border-emerald-800/80 text-[10px]">
+              <div class="font-bold flex justify-between">
+                <span>15:30 - Nuevo Alquiler Hab 5</span>
+                <span class="text-emerald-400 font-numeric font-bold">S/ 40.00 Ingresado</span>
+              </div>
+              <p class="text-emerald-300/90 mt-0.5">El sistema exige registrar al nuevo huésped. El dinero ingresa a caja de forma transparente.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative z-10 mt-4 pt-3 border-t border-sky-700/80 text-sky-100 text-xs flex items-center justify-between font-semibold">
+        <span>Resultado en caja:</span>
+        <span class="text-brand-gold font-bold text-sm font-numeric">S/ 80.00 Registrados al 100%</span>
+      </div>
+    </div>
+
+  </div>
+</div>

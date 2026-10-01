@@ -1,0 +1,24 @@
+{
+  "name": "cuadrape-landing",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "audit": "node scripts/check-contenido.mjs"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^5.1.5",
+    "@fontsource-variable/archivo": "^5.1.0",
+    "astro": "^5.1.0",
+    "tailwindcss": "^3.4.17"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2"
+  }
+}

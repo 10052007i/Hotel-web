@@ -1,0 +1,65 @@
+---
+import { SITE_CONFIG } from '@/config/site';
+import { WHATSAPP_CONFIG } from '@/config/whatsapp';
+import Button from '@/components/ui/Button.astro';
+---
+
+<footer class="bg-slate-950 text-white border-t border-slate-800">
+  
+  <!-- Final CTA Callout -->
+  <div class="py-12 md:py-16 border-b border-slate-800 bg-gradient-to-b from-slate-900 to-slate-950">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-6">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-white tracking-tight">
+        Míralo funcionando en tu propio hospedaje
+      </h2>
+      <p class="text-slate-300 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
+        Agenda una demostración en Pucallpa o por videollamada sin compromiso alguno.
+      </p>
+      <div class="pt-2 flex justify-center">
+        <Button 
+          href={WHATSAPP_CONFIG.obtenerLink()} 
+          variant="whatsapp" 
+          size="lg" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="font-black text-base shadow-2xl"
+        >
+          <span>Pide una demostración por WhatsApp</span>
+        </Button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Legal & Business details -->
+  <div class="py-8 max-w-6xl mx-auto px-4 sm:px-6 text-xs text-slate-400 space-y-4">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4 border-b border-slate-800 pb-6 text-center md:text-left">
+      <div class="flex items-center gap-4">
+        <img src="/logo.svg" alt="Cuadrape Logo Footer" class="h-12 sm:h-14 w-auto brightness-200" />
+        <div>
+          <div class="font-bold text-sm text-white">{SITE_CONFIG.nombreEmpresa}</div>
+          <p class="mt-0.5 text-slate-400 font-numeric">RUC: {SITE_CONFIG.ruc} • {SITE_CONFIG.titularLegal}</p>
+          <p class="text-slate-500">{SITE_CONFIG.ciudad}</p>
+        </div>
+      </div>
+
+      <div class="text-slate-300 font-medium">
+        Contacto: <a href={`mailto:${SITE_CONFIG.soporteEmail}`} class="text-brand-gold hover:underline">{SITE_CONFIG.soporteEmail}</a>
+      </div>
+    </div>
+
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2 text-slate-500 text-[11px]">
+      <div>
+        © {new Date().getFullYear()} {SITE_CONFIG.nombreEmpresa}. Todos los derechos reservados.
+      </div>
+
+      <div class="flex flex-wrap items-center gap-4">
+        <a href="/privacidad" class="hover:text-slate-300 transition">Política de privacidad</a>
+        <span>•</span>
+        <a href="/terminos" class="hover:text-slate-300 transition">Términos del servicio</a>
+        <span>•</span>
+        <a href="/reclamaciones" class="hover:text-slate-300 transition">Libro de reclamaciones</a>
+      </div>
+    </div>
+  </div>
+
+</footer>

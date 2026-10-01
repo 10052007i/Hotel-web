@@ -1,0 +1,29 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/sections/Header.astro';
+import Precios from '@/components/sections/Precios.astro';
+import ComoEmpezamos from '@/components/sections/ComoEmpezamos.astro';
+import Footer from '@/components/sections/Footer.astro';
+import WhatsAppFijo from '@/components/ui/WhatsAppFijo.astro';
+---
+
+<BaseLayout 
+  title="Planes y Precio Transparente | Cuadrape Web"
+  description="Plan único S/119 al mes, IGV incluido, sin permanencia. Implementación S/300 una sola vez en Pucallpa."
+>
+  <Header currentPath="/precios" />
+  <main class="flex-grow">
+    <div class="bg-brand-blue text-white py-10 px-4 text-center">
+      <div class="max-w-4xl mx-auto space-y-2">
+        <h1 class="text-3xl sm:text-4xl font-black">Plan Único y Precio Transparente</h1>
+        <p class="text-sm sm:text-base text-sky-100 max-w-2xl mx-auto">
+          Menos de S/ 4 al día. Sin sorpresas, sin amarras ni cobros ocultos.
+        </p>
+      </div>
+    </div>
+    <Precios />
+    <ComoEmpezamos />
+  </main>
+  <Footer />
+  <WhatsAppFijo idTriggerPortada="hero-whatsapp-btn" />
+</BaseLayout>

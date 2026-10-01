@@ -1,0 +1,37 @@
+@import "@fontsource-variable/archivo";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-brand-primary: #023F72;
+  --color-brand-accent: #E8AF2F;
+  --color-brand-accent-hover: #D49A24;
+  --color-surface-bg: #FFFFFF;
+  --color-surface-muted: #F8FAFC;
+  --color-text-main: #1E293B;
+  --color-text-dark: #0B192C;
+  --color-border: #E2E8F0;
+}
+
+@layer base {
+  html {
+    font-family: 'Archivo Variable', system-ui, sans-serif;
+    color: var(--color-text-main);
+    background-color: var(--color-surface-bg);
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+  }
+
+  .font-numeric {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 16px);
+}
+
+.pt-safe {
+  padding-top: env(safe-area-inset-top, 16px);
+}

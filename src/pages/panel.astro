@@ -1,0 +1,27 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/sections/Header.astro';
+import PanelDueno from '@/components/sections/PanelDueno.astro';
+import Footer from '@/components/sections/Footer.astro';
+import WhatsAppFijo from '@/components/ui/WhatsAppFijo.astro';
+---
+
+<BaseLayout 
+  title="Panel de Control del Dueño | Cuadrape Web"
+  description="Revisa desde tu celular liberaciones anticipadas, diferencias de caja, cobros por Yape/Efectivo y alertas del turno."
+>
+  <Header currentPath="/panel" />
+  <main class="flex-grow">
+    <div class="bg-brand-blue text-white py-10 px-4 text-center">
+      <div class="max-w-4xl mx-auto space-y-2">
+        <h1 class="text-3xl sm:text-4xl font-black">Panel de Control del Dueño</h1>
+        <p class="text-sm sm:text-base text-sky-100 max-w-2xl mx-auto">
+          Todo lo que pasa en tu hospedaje, auditado en tiempo real desde tu celular.
+        </p>
+      </div>
+    </div>
+    <PanelDueno />
+  </main>
+  <Footer />
+  <WhatsAppFijo idTriggerPortada="hero-whatsapp-btn" />
+</BaseLayout>

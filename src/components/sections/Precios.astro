@@ -1,0 +1,124 @@
+---
+import { PRECIOS_CONFIG } from '@/config/precios';
+import { WHATSAPP_CONFIG } from '@/config/whatsapp';
+import Button from '@/components/ui/Button.astro';
+---
+
+<section id="precios" class="py-12 md:py-20 bg-white border-b border-slate-200">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6">
+    
+    <div class="text-center max-w-2xl mx-auto space-y-4">
+      <span class="text-xs font-black uppercase tracking-widest text-brand-blue bg-blue-50 px-3 py-1 rounded-full border border-blue-100">
+        Precio Transparente
+      </span>
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-brand-blue tracking-tight">
+        Sin sorpresas ni cobros ocultos
+      </h2>
+      <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+        Un único plan diseñado para la realidad de los hospedajes.
+      </p>
+    </div>
+
+    <!-- Pricing Single Card with Clearly Visible Web Dev Wallpaper -->
+    <div class="mt-10 bg-slate-950 text-white rounded-3xl border-2 border-brand-gold shadow-2xl p-6 sm:p-10 relative overflow-hidden">
+      
+      <!-- Real Code Editor Wallpaper Background (Highly Visible) -->
+      <div class="absolute inset-0 bg-[url('/images/bg-code-editor.jpg')] bg-cover bg-center opacity-70 pointer-events-none"></div>
+      <div class="absolute inset-0 bg-gradient-to-br from-slate-950/85 via-slate-900/80 to-slate-950/85 backdrop-blur-[1px] pointer-events-none"></div>
+
+      <!-- Top ribbon badge -->
+      <div class="absolute top-0 right-0 bg-brand-gold text-slate-950 font-black text-xs px-4 py-1.5 rounded-bl-xl uppercase tracking-wider shadow z-20">
+        Plan Único Completo
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+        
+        <!-- Left: Price info -->
+        <div class="lg:col-span-6 space-y-4 text-center lg:text-left">
+          <div class="space-y-1">
+            <span class="text-xs font-bold text-brand-gold uppercase tracking-wider">Plan Mensual Hospedajes</span>
+            <div class="flex items-baseline justify-center lg:justify-start gap-2">
+              <span class="text-4xl sm:text-5xl font-black text-white font-numeric tracking-tight">
+                {PRECIOS_CONFIG.planMensual.simbolo}{PRECIOS_CONFIG.planMensual.monto}
+              </span>
+              <span class="text-slate-400 text-sm font-semibold">/ al mes</span>
+            </div>
+            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2 pt-1 text-xs">
+              <span class="bg-emerald-500/20 text-emerald-300 font-bold px-2.5 py-0.5 rounded border border-emerald-500/30">
+                IGV incluido
+              </span>
+              <span class="bg-slate-900/90 text-slate-200 font-bold px-2.5 py-0.5 rounded border border-slate-700">
+                Sin permanencia: cancelas cuando quieras
+              </span>
+            </div>
+          </div>
+
+          <p class="text-xs sm:text-sm text-slate-200">
+            Escala diaria: <strong class="text-brand-gold font-numeric">Menos de S/ {PRECIOS_CONFIG.calcularEscalaDiaria()} al día</strong>.
+          </p>
+
+          <div class="pt-2">
+            <Button 
+              href={WHATSAPP_CONFIG.obtenerLink()} 
+              variant="whatsapp" 
+              size="lg" 
+              fullWidth={true}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="font-black text-base shadow-lg"
+            >
+              <span>Pide una demostración por WhatsApp</span>
+            </Button>
+          </div>
+          <p class="text-[11px] text-slate-300 text-center lg:text-left">
+            ¿Más de {PRECIOS_CONFIG.planMensual.limiteHabitaciones} habitaciones? Escríbenos para una cotización especial.
+          </p>
+        </div>
+
+        <!-- Right: Features list & Implementation -->
+        <div class="lg:col-span-6 space-y-6 bg-slate-950/90 p-5 sm:p-6 rounded-2xl border border-slate-700 backdrop-blur-md shadow-xl">
+          
+          <div>
+            <h3 class="text-sm font-bold text-brand-gold uppercase tracking-wider mb-3">Tu mensualidad incluye:</h3>
+            <ul class="space-y-2 text-xs sm:text-sm text-slate-200">
+              <li class="flex items-center gap-2.5">
+                <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span>Hasta 30 habitaciones y usuarios ilimitados</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span>Soporte por WhatsApp exclusivo (Lun-Sáb 9:00 a 19:00)</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span>Actualizaciones y funciones nuevas sin costo adicional</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span>Servidores seguros y copias de seguridad automáticas</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span>Videos de capacitación para personal nuevo siempre disponibles</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="pt-4 border-t border-slate-800 space-y-1">
+            <div class="flex items-baseline justify-between text-xs sm:text-sm">
+              <strong class="text-white">Implementación inicial:</strong>
+              <span class="text-brand-gold font-bold font-numeric">S/ {PRECIOS_CONFIG.implementacion.monto} (pago único)</span>
+            </div>
+            <p class="text-[11px] text-slate-300 leading-relaxed">
+              Visitamos tu hospedaje en Pucallpa, cargamos tus habitaciones, tarifas y métodos de pago, y capacitamos a tu personal presencialmente.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
